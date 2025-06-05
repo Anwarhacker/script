@@ -99,6 +99,19 @@ cd myapp
 
 
 
+3]]
+
+mkdir pgm33
+cd pgm33
+gradle init
+1
+3
+21
+enter
+1(Single application project)
+1(Kotlin)
+yes
+gradlew run
 
 
 
