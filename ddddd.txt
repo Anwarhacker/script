@@ -311,7 +311,7 @@ sudo mkdir -p /etc/ansible
 sudo nano /etc/ansible/hosts
 
 //nano editor will open
-//write this inside that type this 
+//write this inside that and manually type this 
 
 [local] 
 localhost ansible_connection=local
