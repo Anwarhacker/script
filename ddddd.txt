@@ -184,7 +184,7 @@ public class App {
 8)yes
 9)2
 10)no
-11)paste in build gradle for below code
+11)paste in the maven-example/ build.gradle for below code
 
 
 plugins {
