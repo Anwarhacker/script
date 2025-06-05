@@ -280,45 +280,38 @@ pipeline {
 
 
 
+7]]
+//open powershell as admiinistrator
+1) wsl --unregister ubuntu
+2) wsl --install
 
+//open ubuntu
 
-7]]]
-->Open PowerShell as Administrator and run below commands
-wsl --install
-wsl
- next ubuntu start as administrator and run below commands
-  ->sudo apt update 
-  ->enter ur ubuntu passoword
-->sudo apt install ansible -y 
-->ansible –version
-->mkdir ~/ansible-lab 
-->cd ~/ansible-lab
-->nano hosts    open one page and paste below code
+name
+password
+retype password
+
+sudo apt update && upgrade
+sudo apt install ansible -y
+ansible --version
+sudo mkdir -p /etc/ansible
+sudo nano /etc/ansible/hosts
+
+//nano editor will open
+//write this inside that type this 
+
 [local] 
-localhost ansible_connection=local  press ctrl+o-> enter to save and ctrl+x  to exit
-->ansible -i hosts local -m ping
-->nano install_nginx.yml  open one page paste below the code
----
-- name: Install and start NGINX on localhost
-  hosts: local
-  become: yes
+localhost ansible_connection=local
 
-  tasks:
-    - name: INstall NGINX
-      apt:
-        name: nginx
-        state: present
-        update_cache: yes
+ansible-inventory --list -y
+sudo ansible all -m ping
 
-    - name: Ensure NGINX is running
-      service:
-        name: nginx
-        state: started
-        enabled: yes
-press ctrl+o-> enter to save and ctrl+x
-ansible-playbook -i hosts install_nginx.yml 
-ansible-playbook -i hosts install_nginx.yml --ask-become-pass  (if error type this)
-->curl http://localhost 
+
+
+
+
+
+      
 
 
 
