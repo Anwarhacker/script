@@ -303,6 +303,10 @@ sudo nano /etc/ansible/hosts
 [local] 
 localhost ansible_connection=local
 
+ctrl+o
+enter
+ctrl+x
+
 ansible-inventory --list -y
 sudo ansible all -m ping
 
